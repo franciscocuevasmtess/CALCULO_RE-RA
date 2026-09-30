@@ -1,0 +1,183 @@
+fecha: Martes 06 de Mayo de 2025
+
+Trabajo a realizar: 
+Analizar estructura de base de datos actual, para que permita un histórico de RE, RA, actualmente lo hace en vivo.
+RE: Total general de horas extras del mes.
+RA_80: Total de horas extras pagadas al 80%.
+RA_100_mensual: Total de horas extras pagadas al 100%.
+
+
+
+
+
+BOTON DE CIERRE DE MES Y AHI VER COMO CALCULAR EL RE_80, EL RE_100
+----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+img1
+- Este Lunes 6 por ejemplo
+Yo en los parametros del 2023 puse en RE que se hacen 3 horas
+Y ahi estira solo 2horas y despues 2 horas en adicional
+Y en realidad es 3 horas en RE y 1:31 en Ra
+
+- El 2022 tambien pero el 2022 no estira las horas😅
+
+- Dale Francisco el del 2024 y 2025 ya cargo nomas de como tiene que ser
+
+img2
+- Ya cargue 2025 tambien y estira de la misma forma que 2023 Francisco, otra cosa tambien es que ahi donde te marque los 2 viernes por ejemplo: el viernes 7 estira bien las 8 horas semanales pero el viernes 14 estira 10horas osea 2 horas en RE y 3:05 en RA y solo debe de estirar 3:05 en RA
+
+- Excelente esta Francisco en cuanto a los parámetros
+
+- img3
+El sabado 29 por ejemplo tiene una comision de servicio
+Hay alguna forma que al cargarle las horas, aparezca sus horas adicionales en este caso que es sabado?
+Lo mismo entre semana por ejemplo si se va de 14hs a 17hs y ya no viene a marcar, puede arrojarle en sus horas extras si es que le cargamos el horario?
+
+* Este pio es un caso excepcional, osea solo para ese caso?
+No probe en realidad, ese ya estaba luego pero ahora que se esta viendo el sistema nomas consulto
+Siii solo para los casos de comisionamientos pueden correr sus horas extras
+Porque por ejemplo los choferes pueden trasladarles a los funcionarios hasta tarde
+O los de prensa les toca cubrir algun evento entonces no vienen mas por aca para marcar
+Por eso mas bien, seria mejor si ya refleja en horas extras siempre y cuando nosotros le carguemos porque esta el formulario
+
+* Y voy a ver en ese caso como adaptar, y de momento como hacen ustedes para esos casos?
+Siii, cargamos en la observacion el comisionamiento y la hora que fueron y con eso le calculamos, pero dejamos la evidencia en la observación
+
+- Excelente como calcula los parametros Francisco
+Detalles lo que debemos ver que son con respecto a las novedades
+Pero eso una vez que quede bien el parametro creo que podemos ver
+
+img4
+- Aca por ejemplo el miercoles 9 estira en RE 2hs y Ra 3:32cuando debe de ser RE 2hs y RA 1:32
+En la Asistencia de Nery Barreto de Abril estuve viendo
+--------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+Nery Barreto, 4, 2025
+aca por ejemplo el miércoles 9 estira en RE 2hs y Ra 3:32 cuando debe de ser RE 2hs y RA 1:32
+Respuesta:
+Para esta parte, te estiro de esa forma porque en la base de datos esta configurado que para
+ese año el Maximo Diario(RE) esta configurado con el valor: 03:00:00 
+y el Hora Adicional(RA) desde: 11:00:00 y hizo sus cálculos en base a esos parámetros.
+Si le volves a colocar los valores por defecto(Maximo Diario(RE)=02:00:00 y Hora Adicional(RA) desde: 10:00:00)
+va a traer esos datos que indicas.
+---------------------------------------------------------------------------------------------
+
+En el de Alan no estira bien.
+Este lunes 6 por ejemplo(Alan, 11, 2023)
+yo en los parámetros del 2023 puse en RE que se hacen 3 horas
+y ahí estira solo 2horas y después 2 horas en adicional
+Y en realidad es 3 horas en RE y 1:31 en Ra
+[YA SE SOLUCIONO]
+----------------------------------------------------------------------------------------------
+
+el 2022 también pero el 2022 no estira las horas.
+[EXISTEN REGISTROS DESDE EL 2023-06-30]
+Respuesta:
+Verifico que en la base de datos se tienen datos a partir de Junio del 2023
+por eso no estira desde el 2022.
+----------------------------------------------------
+
+Ya cargue 2025(2025,02,alan) también y estira de la misma forma que 2023 Francisco, otra cosa
+también es que ahí donde te marque los 2 viernes(v-07-feb, v-15-feb) por ejemplo: el viernes 7 estira
+bien las 8 horas semanales pero el viernes 14 estira 10horas ósea 2 horas en RE y 3:05 en RA y solo debe
+de estirar 3:05 en RA
+----------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+Buenos días Alan, te quiero realizar las siguientes consultas:
+- Para la parte de LLEGADAS TARDÍAS
+
+1.) Por este medio se comunica las fallas a corregir en el Sistema SIAP, de acuerdo con lo observado y verificado a través de la carga de formularios de permisos y/o justificativos y lo reflejado en el reporte de marcación:
+[Pregunta] El formulario que indicas para la carga de "permisos y/o justificativos" cual seria? realizas la carga en un mismo formulario(misma pantalla) o son formularios diferentes?
+
+2.) Al realizar la carga de formularios en el apartado de Novedades, debe de quedar reflejado en el reporte de Marcación Mensual lo siguiente:
+[Pregunta] Este es el mismo formulario que usas para la carga de "permisos y/o justificativos"?, o es otro diferente?
+
+3.) - LLEGADAS TARDÍAS: Las llegadas tardías se deben de compensar en el día.
+* Ejemplo en relación a la asistencia sin realizar RE: Al cargar la llegada tardía el día 11/07/2025 de 07:00 a 07:45, ese mismo día debe de realizar la compensación hasta las 15:45hs y no debe de estirar la compensación a los siguientes días.
+* Ejemplo en relación a la asistencia al realizar RE: Al cargar la llegada tardía el día 11/07/2025 de 07:00 a 07:45, si el funcionario se retira a las 17:45hs, se deben de completar su compensación de 45min. y las restantes 02 horas deben de ser computadas en RE.
+[Pregunta] Para realizar la carga de una llegada tardía Tenes algún formulario de carga? o esto ya te estira del sistema una vez que ejecutas el Reporte Mensual?
+[Solicitud - Ejemplo en relación a la asistencia sin realizar RE] Me podrías decir con que usuario y que fecha probaste y verificaste que realiza mal el calculo?, me va a ayudar más si me indicas, en que fecha esta haciendo mal ese calculo y que valor al realizar la corrección debería ser, como para tener una referencia a la hora de verificar los cálculos actuales que hace el sistema y poder comparar.
+[Solicitud - Ejemplo en relación a la asistencia al realizar RE] Para este punto tenes algun ejemplo(Usuario y Fecha) con que probaste el reporte y ves de que estira mal los datos?
+
+
+
+
+
+PARA LA PARTE DE PERMISO PARTICULAR A COMPENSAR
+4.) - PERMISO PARTICULAR A COMPENSAR Y/O PARCIAL: Los permisos particulares, ya sea de ausencia o dentro de la jornada laboral como parcial a compensar, deben se deben de compensar dentro de los primeros 08 días hábiles posterior a la incidencia.
+* Ejemplo en relación a la asistencia sin realizar RE: Al cargar un permiso de ausencia particular "a compensar", la compensación debe de realizarse dentro de los 08 días hábiles, no deben se estirar las compensaciones a mas días posterior a los 08.
+* Ejemplo en relación a la asistencia al realizar RE: Al cargar un permiso de ausencia particular a compensar, el ultimo día de compensación (ya sea el ultimo día de compensación o dentro de los primeros 8 días) si le falta realizar 30 min de compensación para completar las horas a compensar y se quedo hasta las 17:30hs, debe de quedar registrado en el sistema "compensados 30 min" y "RE:02:00"
+[Pregunta - Ejemplo en relación a la asistencia sin realizar RE]  ¿Esto como se debe reflejar? En el sistema al ejecutar el Reporte Mensual, Si la persona que tiene cargada un permiso de ausencia particular a compensar, empieza a
+compensar despues de los 8 dias habiles NO CUENTA como compensado? 
+[Pregunta - Ejemplo en relación a la asistencia al realizar RE] Para este caso y con el ejemplo que das, se compensa la media hora y lo restante va a parar al "RE:02:00".
+-----------
+
+
+
+
+Buenas tardes Francisco, respondiendo a tus consultas:
+
+Llegadas tardías
+1.)	El formulario que indicas para la carga de "permisos y/o justificativos" cual seria? realizas la carga en un mismo formulario (misma pantalla) o son formularios diferentes?
+Respuesta: Un mismo Formulario de Permisos y/o justificativos se cargan para todas las novedades, ya sean Llegada tardía, Permisos Particulares, Reposos Médicos, Comisionamientos, etc.
+2.)	Este es el mismo formulario que usas para la carga de "permisos y/o justificativos"?, o es otro diferente?
+Respuesta: Respuesta contestada en el punto 1) con respecto a la carga, y todas las cargas que se realizan en el apartado de novedades quedan reflejados en el reporte de marcaciones mensual
+3.)	Para realizar la carga de una llegada tardía Tenes algún formulario de carga? o esto ya te estira del sistema una vez que ejecutas el Reporte Mensual?.
+Respuesta: al realizar la carga de la llegada tardía ya quedan reflejados en el reporte mensual.
+
+Permisos Particulares a compensar
+
+4.) - PERMISO PARTICULAR A COMPENSAR Y/O PARCIAL:
+[Pregunta - Ejemplo en relación a la asistencia sin realizar RE]  ¿Esto como se debe reflejar? En el sistema al ejecutar el Reporte Mensual, Si la persona que tiene cargada un permiso de ausencia particular a compensar, empieza a
+compensar despues de los 8 dias habiles NO CUENTA como compensado? 
+Respuesta: No cuenta como compensado, debido a que solo tiene 8 días hábiles para compensar.
+[Pregunta - Ejemplo en relación a la asistencia al realizar RE] Para este caso y con el ejemplo que das, se compensa la media hora y lo restante va a parar al "RE:02:00".
+Respuesta: Asi mismo, lo que resta de la compensación si alcanza las 1 horas para horas extras, debe de ir al apartado de RE
+
+en cuanto a los ejemplos, esta semana estare realizado los calculos de horas extras y te estaré pasando algunas observaciones para poder ir viendo
+
+
+
+- LLEGADAS TARDÍAS: Las llegadas tardías se deben de compensar en el día.
+- BUSCAR ALGUN EJEMPLO DE LLEGADA TARDIA, QUE NO SE COMPENSO EN EL DIA...
+- PROBAR CON ALGUN DIA O MES.
+- BUSCAR EN LOS DATOS DEL REPORTE SI SE ENCUENTRA ALGUNO CON ESAS CARACTERISTICAS...
+
+
